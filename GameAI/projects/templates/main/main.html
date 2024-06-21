@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <title>mainPage</title>
+</head>
+<body>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'main/main.css' %}?">
+
+<div class="title">
+    다국어-예의-판독기
+    <div class="author">
+        C193354 이원용
+    </div>
+</div>
+
+
+
+<div class="main">
+    
+    <form action="{% url 'result' %}" method="POST">
+        {% csrf_token %}
+        <div class="mainTitle">
+            어떤 내용입니까?
+            <br>
+            ※모든 언어를 다 지원합니다※
+        </div>
+
+        <div class="mainParagraph">
+            <textarea id="paragraph" name="paragraph" class="paragraph"></textarea>
+        </div>
+        
+        <div class="checkBox">
+            <input type="checkBox" id="checkBox" name="checkBox">
+            <label for="checkBox">영어가 아닙니다.</label>
+        </div>
+
+        <div class="mainSubmit">
+            <button type="submit" class="mainSubmitButton">SUBMIT</button>
+        </div>
+    </form>
+</div>
+
+
+</body>

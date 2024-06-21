@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <title>mainPage</title>
+</head>
+<body>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'main/result.css' %}">
+
+<div class="case">
+    <div class="paragraph">
+        <div class="title">
+            당신이 적은 문장!
+        </div>
+        {{ paragraph }}
+    </div>
+    <br><br>
+    {% if translated %}
+    <div class="translated">
+        <div class="title">
+            GPT가 번역한 문장
+        </div>
+        {{ translated }}
+    </div>
+    {% endif %}
+    <br><br>
+
+    <div class="answer">
+        <div class="title">
+            당신의 예의점수는...
+        </div>
+        {{ answer }}
+    </div>
+
+    <br><br>
+
+    <div class="return">
+        <form action="{% url 'main' %}" method="POST">
+            {% csrf_token %}
+            <button> 돌아갈래요 </button>
+        </form>
+    </div>
+</div>
+</body>

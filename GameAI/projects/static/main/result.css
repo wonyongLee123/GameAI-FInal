@@ -1,0 +1,40 @@
+.case{
+    position:absolute;
+    font-size: 30px;
+    font-weight: 200;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+
+.paragraph{ 
+    font-size: 30px;
+    font-weight: 600;
+    margin:auto;
+    text-align:center;
+}
+
+.answer{
+    font-size: 80px;
+    font-weight: 700;
+    margin:auto;
+    text-align:center;
+}
+
+.translated{
+    margin:auto;
+    font-weight: 700;
+    text-align:center;
+}
+
+.return{
+    margin:auto;
+}
+
+.title{
+    font-weight: 200;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
